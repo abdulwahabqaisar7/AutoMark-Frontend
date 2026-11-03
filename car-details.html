@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View vehicle details and contact AutoMark about an inspected pre-owned car." />
+    <title>Toyota Corolla Grande | AutoMark</title>
+    <link rel="icon" type="image/svg+xml" href="assets/automark-emblem.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+  <body class="details-page">
+    <header class="site-header">
+      <nav class="navigation" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="AutoMark home"><img src="assets/automark-emblem.svg" width="33" height="30" alt="AutoMark emblem" /><span>AutoMark</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <div class="primary-navigation" id="primary-navigation">
+          <a href="index.html">Home</a><a href="index.html#why-automark">About Us</a><a class="is-current" href="index.html#featured-cars" aria-current="page">Cars for Sale</a><a href="index.html#home-hero">Our Services</a><a href="index.html#contact">Contact</a>
+        </div>
+        <div class="navigation-actions"><a class="button button-gold nav-sell" href="sell-your-car.html">Sell Your Car</a><a class="button button-light nav-login" href="login.html">Login</a></div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-overview">
+        <div class="detail-breadcrumb-row">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><img src="assets/figma-detail-chevron.svg" width="12" height="12" alt="Right chevron separating breadcrumb items" /><a href="index.html#featured-cars">Cars for Sale</a><img src="assets/figma-detail-chevron.svg" width="12" height="12" alt="Right chevron separating breadcrumb items" /><span id="detail-breadcrumb-name" aria-current="page">Toyota Corolla Grande</span></nav>
+          <a class="back-link" href="index.html#featured-cars"><img src="assets/figma-detail-back.svg" width="16" height="16" alt="Left arrow pointing back to listings" />Back to listings</a>
+        </div>
+        <div class="detail-heading">
+          <div>
+            <p class="detail-eyebrow">PRE-OWNED COLLECTION</p>
+            <h1 id="detail-title">Toyota Corolla Grande</h1>
+            <div class="detail-subtitle"><span id="detail-year-variant">2021 · 1.8L CVT</span><span class="detail-divider"></span><span class="detail-city"><img src="assets/figma-detail-pin.svg" width="16" height="16" alt="Map pin for vehicle location" /><span id="detail-city">Karachi</span></span></div>
+          </div>
+          <span class="detail-featured"><img src="assets/figma-detail-star.svg" width="14" height="14" alt="Star marking this vehicle as featured" />FEATURED</span>
+        </div>
+
+        <div class="detail-columns">
+          <section class="detail-gallery" aria-label="Vehicle photos and highlights">
+            <div class="detail-main-photo">
+              <img id="detail-photo" src="assets/vehicle-corolla.png" width="1000" height="600" alt="Exterior view of a Toyota Corolla Grande sedan" />
+              <span class="photo-count"><img src="assets/figma-detail-images.svg" width="16" height="16" alt="Photo gallery icon" />1 photo</span>
+            </div>
+            <div class="detail-thumbnails">
+              <div class="selected-thumbnail"><img id="detail-thumbnail" src="assets/vehicle-corolla.png" width="296" height="176" alt="Thumbnail showing the Toyota Corolla Grande exterior" /></div>
+              <div class="additional-photos">
+                <img src="assets/figma-detail-camera.svg" width="24" height="24" alt="Camera for requesting additional vehicle photos" />
+                <div><strong>Want a closer look?</strong><span>Ask the showroom for interior and additional exterior photos.</span></div>
+                <img src="assets/figma-detail-arrow.svg" width="20" height="20" alt="Arrow indicating additional photo request" />
+              </div>
+            </div>
+            <div class="detail-highlights">
+              <div><img src="assets/figma-detail-calendar.svg" width="22" height="22" alt="Calendar for manufacturing year" /><span><small>Manufacturing year</small><strong id="detail-year">2021</strong></span></div>
+              <div><img src="assets/figma-detail-gauge.svg" width="22" height="22" alt="Odometer for vehicle mileage" /><span><small>Mileage</small><strong id="detail-mileage">45,000 km</strong></span></div>
+              <div><img src="assets/figma-detail-settings.svg" width="22" height="22" alt="Gears for transmission type" /><span><small>Transmission</small><strong id="detail-transmission">Automatic</strong></span></div>
+              <div><img src="assets/figma-detail-fuel.svg" width="22" height="22" alt="Fuel pump for fuel type" /><span><small>Fuel type</small><strong id="detail-fuel">Petrol</strong></span></div>
+            </div>
+          </section>
+
+          <aside class="detail-contact-column" aria-label="Price and contact">
+            <section class="price-contact-card">
+              <div class="asking-price"><span>Asking price</span><strong id="detail-price">PKR 65 Lakh</strong><p>Confirm availability and final price with the showroom.</p></div>
+              <hr />
+              <div class="enquiry-intro"><h2>Interested in this car?</h2><p>Speak to AutoMark about this <span data-car-name>Corolla Grande</span> or arrange a viewing.</p></div>
+              <div class="detail-actions">
+                <a class="button button-gold" href="tel:+923001234567"><img src="assets/figma-detail-arrow.svg" width="16" height="16" alt="Arrow indicating the showroom call action" />Call showroom</a>
+                <a class="button button-outline" href="https://wa.me/923001234567"><img src="assets/figma-detail-message.svg" width="18" height="18" alt="Message icon for WhatsApp enquiry" />Enquire on WhatsApp</a>
+                <a class="showroom-phone" href="tel:+923001234567">+92 300 1234567</a>
+                <span class="sample-contact">Sample contact details</span>
+              </div>
+            </section>
+            <aside class="viewing-note">
+              <img src="assets/figma-detail-pin.svg" width="20" height="20" alt="Map pin for vehicle viewing location" />
+              <div><strong>Plan your viewing</strong><p>This car is listed in <span data-city-name>Karachi</span>. Confirm its viewing location before visiting.</p></div>
+            </aside>
+          </aside>
+        </div>
+      </section>
+
+      <section class="detail-information">
+        <div class="detail-information-main">
+          <section class="specification-card" aria-labelledby="specifications-title">
+            <div class="specification-heading"><h2 id="specifications-title">The details, at a glance.</h2><p>Key specifications for this <span data-car-name>Toyota Corolla Grande</span>.</p></div>
+            <div class="specification-groups">
+              <div><h3>Vehicle identity</h3><dl><div><dt>Make</dt><dd id="detail-make">Toyota</dd></div><div><dt>Model</dt><dd id="detail-model">Corolla Grande</dd></div><div><dt>Manufacturing year</dt><dd id="detail-year-spec">2021</dd></div><div><dt>Variant</dt><dd id="detail-variant">1.8L CVT</dd></div></dl></div>
+              <div><h3>Driving &amp; location</h3><dl><div><dt>Mileage</dt><dd id="detail-mileage-spec">45,000 km</dd></div><div><dt>Transmission</dt><dd id="detail-transmission-spec">Automatic</dd></div><div><dt>Fuel type</dt><dd id="detail-fuel-spec">Petrol</dd></div><div><dt>Listed city</dt><dd id="detail-city-spec">Karachi</dd></div></dl></div>
+            </div>
+          </section>
+          <section class="showroom-info-card">
+            <div class="showroom-info-heading"><img src="assets/figma-detail-info.svg" width="18" height="18" alt="Information icon for vehicle checks" /><h2>A few things to confirm</h2></div>
+            <p>Ask the showroom about registration documents, vehicle condition and service records. These details have not been provided for this listing.</p>
+            <div class="showroom-address"><span><strong>AutoMark showroom</strong><small>Lahore, Pakistan · Sample contact details</small></span><a class="button button-outline" href="#enquiry-form"><img src="assets/figma-detail-pin.svg" width="16" height="16" alt="Map pin for arranging a vehicle viewing" />Arrange a viewing</a></div>
+          </section>
+        </div>
+        <form class="detail-enquiry-form" id="enquiry-form">
+          <div><h2>Ask about this car</h2><p>Leave your details and a question for the showroom team.</p></div>
+          <label class="field"><span>Full name</span><input name="name" type="text" placeholder="Enter your full name" required /></label>
+          <label class="field"><span>Phone number</span><input name="phone" type="tel" placeholder="e.g. +92 300 1234567" required /></label>
+          <label class="field"><span>Your message</span><textarea id="enquiry-message" name="message" rows="4" required>I’m interested in the 2021 Toyota Corolla Grande, 1.8L CVT. Please share availability and viewing details.</textarea></label>
+          <button class="button button-gold" type="submit"><img src="assets/figma-detail-arrow.svg" width="16" height="16" alt="Arrow indicating the send enquiry action" />Send enquiry</button>
+          <p class="form-status" id="enquiry-status" aria-live="polite"></p>
+          <p class="privacy-note">Your contact details will be shared with AutoMark to respond to this enquiry.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AutoMark home"><img src="assets/automark-emblem.svg" width="33" height="30" alt="AutoMark emblem" /><span>AutoMark</span></a>
+          <p>AutoMark is your trusted partner for buying and selling pre-owned cars in Pakistan. We provide a hassle-free experience with verified vehicles and transparent pricing.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="assets/figma-facebook.svg" width="24" height="24" alt="Facebook logo" /></a><a href="https://instagram.com" aria-label="Instagram"><img src="assets/figma-instagram.svg" width="24" height="24" alt="Instagram logo" /></a><a href="https://twitter.com" aria-label="Twitter"><img src="assets/figma-twitter.svg" width="24" height="24" alt="Twitter logo" /></a><a href="https://youtube.com" aria-label="YouTube"><img src="assets/figma-youtube.svg" width="24" height="24" alt="YouTube logo" /></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div><h2>Quick Links</h2><a href="index.html">Home</a><a href="index.html#why-automark">About Us</a><a href="index.html#featured-cars">Cars for Sale</a><a href="index.html#home-hero">Our Services</a><a href="index.html#contact">Contact</a></div>
+          <div><h2>Popular Brands</h2><a href="index.html#featured-cars">Toyota</a><a href="index.html#featured-cars">Honda</a><a href="index.html#featured-cars">Suzuki</a><a href="index.html#featured-cars">Hyundai</a><a href="index.html#featured-cars">Kia</a></div>
+          <div><h2>Contact Information</h2><a href="index.html#contact">Lahore, Pakistan</a><a href="tel:+923001234567">+92 300 1234567</a><a href="mailto:info@automark.pk">info@automark.pk</a><a href="mailto:info@automark.pk">Sample contact details</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 AutoMark. All rights reserved.</span><div><a href="mailto:info@automark.pk?subject=Privacy%20policy">Privacy Policy</a><a href="mailto:info@automark.pk?subject=Terms%20of%20service">Terms of Service</a></div></div>
+    </footer>
+    <script src="site.js"></script>
+    <script src="car-details.js"></script>
+  </body>
+</html>

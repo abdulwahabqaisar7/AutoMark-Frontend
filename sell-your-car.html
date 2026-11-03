@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Share your vehicle details with AutoMark and let our team review your car."
+    />
+    <title>Sell Your Car | AutoMark</title>
+    <link rel="icon" type="image/svg+xml" href="assets/automark-emblem.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#101d30",
+              gold: "#d4a63d",
+              ink: "#101d30",
+              muted: "#697382",
+              canvas: "#f3f4f6",
+              line: "#e3e6eb",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+  <body class="min-h-screen bg-canvas font-sans text-ink">
+    <header class="site-header bg-navy text-white">
+      <nav class="navigation flex items-center justify-between gap-6" aria-label="Main navigation">
+        <a class="brand flex items-center gap-2.5" href="index.html" aria-label="AutoMark home">
+          <img src="assets/automark-emblem.svg" width="33" height="30" alt="AutoMark emblem" />
+          <span>AutoMark</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Open navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="primary-navigation flex items-center gap-8" id="primary-navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#why-automark">About Us</a>
+          <a href="index.html#featured-cars">Cars for Sale</a>
+          <a href="index.html#home-hero">Our Services</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="navigation-actions flex items-center">
+          <a class="button button-gold nav-sell inline-flex items-center justify-center gap-2 rounded-lg px-5 font-semibold" href="#sell-form">Sell Your Car</a>
+          <a class="button button-light nav-login inline-flex items-center justify-center gap-2 rounded-lg px-5 font-semibold" href="login.html">Login</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero relative bg-white" aria-labelledby="page-title">
+        <div class="hero-breadcrumb-row">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <img src="assets/chevron-right.svg" width="12" height="12" alt="Right chevron separating breadcrumb items" />
+            <span aria-current="page">Sell Your Car</span>
+          </nav>
+          <a class="back-link" href="index.html">
+            <img src="assets/arrow-left.svg" width="16" height="16" alt="Left arrow pointing back to home" />
+            <span>Back to home</span>
+          </a>
+        </div>
+
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> SELL WITH AUTOMARK</div>
+          <h1 id="page-title">Sell Your Car</h1>
+          <p>
+            Ready for your next chapter? Share your car’s details, photos and
+            contact information for review by the AutoMark team.
+          </p>
+        </div>
+        <p class="required-note">* Required fields</p>
+      </section>
+
+      <section class="submission-layout grid items-start gap-8" aria-label="Car submission">
+        <form class="submission-form flex flex-col gap-6" id="sell-form">
+          <section class="form-card vehicle-card rounded-xl border border-line bg-white" aria-labelledby="vehicle-title">
+            <div class="section-heading flex items-start gap-3.5">
+              <span class="step-number">01</span>
+              <div>
+                <h2 id="vehicle-title">Tell us about your car</h2>
+                <p>Use the details shown on your vehicle’s registration documents.</p>
+              </div>
+            </div>
+            <div class="section-divider"></div>
+
+            <div class="field-grid three-columns grid gap-5">
+              <div class="field">
+                <label for="brand">Brand <span>*</span></label>
+                <div class="control-wrap has-leading-icon">
+                  <img class="leading-icon" src="assets/car-front.svg" width="18" height="18" alt="Car icon for selecting the vehicle brand" />
+                  <select id="brand" name="brand" required>
+                    <option value="" selected disabled>Select brand</option>
+                    <option>Toyota</option>
+                    <option>Honda</option>
+                    <option>Suzuki</option>
+                    <option>Hyundai</option>
+                    <option>Kia</option>
+                    <option>Other</option>
+                  </select>
+                  <img class="trailing-icon" src="assets/chevron-down.svg" width="16" height="16" alt="Expand brand options" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="model">Model <span>*</span></label>
+                <div class="control-wrap">
+                  <select id="model" name="model" required>
+                    <option value="" selected disabled>Select model</option>
+                    <option>Corolla</option>
+                    <option>Civic</option>
+                    <option>Alto</option>
+                    <option>Yaris</option>
+                    <option>Other</option>
+                  </select>
+                  <img class="trailing-icon" src="assets/chevron-down.svg" width="16" height="16" alt="Expand model options" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="variant">Variant <span>*</span></label>
+                <input id="variant" name="variant" type="text" placeholder="Enter variant" required />
+              </div>
+            </div>
+            <p class="field-hint">Brands include Toyota, Honda, Suzuki, Hyundai and Kia.</p>
+
+            <div class="field-grid three-columns grid gap-5">
+              <div class="field">
+                <label for="year">Manufacturing year <span>*</span></label>
+                <div class="control-wrap">
+                  <select id="year" name="year" required>
+                    <option value="" selected disabled>Select year</option>
+                  </select>
+                  <img class="trailing-icon" src="assets/chevron-down.svg" width="16" height="16" alt="Expand manufacturing year options" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="city">City <span>*</span></label>
+                <div class="control-wrap has-leading-icon">
+                  <img class="leading-icon" src="assets/map-pin.svg" width="18" height="18" alt="Map pin for vehicle location" />
+                  <select id="city" name="city" required>
+                    <option value="" selected disabled>Select current city</option>
+                    <option>Lahore</option>
+                    <option>Karachi</option>
+                    <option>Islamabad</option>
+                    <option>Rawalpindi</option>
+                    <option>Other</option>
+                  </select>
+                  <img class="trailing-icon" src="assets/chevron-down.svg" width="16" height="16" alt="Expand city options" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="registration-city">Registration city <span>*</span></label>
+                <div class="control-wrap has-leading-icon">
+                  <img class="leading-icon" src="assets/map-pin.svg" width="18" height="18" alt="Map pin for registration city" />
+                  <select id="registration-city" name="registration-city" required>
+                    <option value="" selected disabled>Select registration city</option>
+                    <option>Lahore</option>
+                    <option>Karachi</option>
+                    <option>Islamabad</option>
+                    <option>Rawalpindi</option>
+                    <option>Other</option>
+                  </select>
+                  <img class="trailing-icon" src="assets/chevron-down.svg" width="16" height="16" alt="Expand registration city options" />
+                </div>
+              </div>
+            </div>
+            <p class="field-hint">City is where your car is currently located, e.g. Lahore, Karachi or Islamabad.</p>
+
+            <div class="field-grid three-columns grid gap-5">
+              <div class="field">
+                <label for="mileage">Mileage (km) <span>*</span></label>
+                <input id="mileage" name="mileage" type="number" min="0" placeholder="Enter odometer reading" required />
+              </div>
+              <div class="field">
+                <label for="transmission">Transmission <span>*</span></label>
+                <div class="control-wrap">
+                  <select id="transmission" name="transmission" required>
+                    <option value="" selected disabled>Select transmission</option>
+                    <option>Automatic</option>
+                    <option>Manual</option>
+                  </select>
+                  <img class="trailing-icon" src="assets/chevron-down.svg" width="16" height="16" alt="Expand transmission options" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="fuel">Fuel type <span>*</span></label>
+                <div class="control-wrap">
+                  <select id="fuel" name="fuel" required>
+                    <option value="" selected disabled>Select fuel type</option>
+                    <option>Petrol</option>
+                    <option>Diesel</option>
+                    <option>Hybrid</option>
+                    <option>Electric</option>
+                    <option>CNG</option>
+                  </select>
+                  <img class="trailing-icon" src="assets/chevron-down.svg" width="16" height="16" alt="Expand fuel type options" />
+                </div>
+              </div>
+            </div>
+
+            <div class="section-divider"></div>
+            <div class="price-row">
+              <div class="field price-field">
+                <label for="price">Asking price (PKR) <span>*</span></label>
+                <div class="control-wrap has-leading-icon">
+                  <img class="leading-icon" src="assets/wallet.svg" width="18" height="18" alt="Wallet icon for asking price" />
+                  <input id="price" name="price" type="number" min="1" placeholder="Enter amount in PKR" required />
+                </div>
+              </div>
+              <p class="field-hint price-hint">
+                Enter your full asking amount in Pakistani rupees, not in lakh or crore.
+              </p>
+            </div>
+
+            <div class="field description-field">
+              <label for="description">Description (optional)</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                placeholder="Tell us about your car’s condition, features, service history and any repairs or modifications."
+              ></textarea>
+              <p class="field-hint">Keep it factual. Please don’t include your phone number or other personal details here.</p>
+            </div>
+          </section>
+
+          <section class="form-card photos-card rounded-xl border border-line bg-white" aria-labelledby="photos-title">
+            <div class="section-heading flex items-start gap-3.5">
+              <span class="step-number">02</span>
+              <div>
+                <h2 id="photos-title">Add car photos</h2>
+                <p>Clear, recent photos help us understand your car’s condition. Photos are optional.</p>
+              </div>
+            </div>
+            <div
+              class="upload-zone flex items-center gap-4 rounded-lg"
+              id="upload-zone"
+              role="group"
+              aria-label="Add car photos"
+            >
+              <input id="photos" name="photos" type="file" accept="image/jpeg,image/png" multiple hidden />
+              <img src="assets/image-up.svg" width="24" height="24" alt="Image upload icon for car photos" />
+              <div class="upload-copy">
+                <strong>Drag and drop your photos here</strong>
+                <span>JPG or PNG · Up to 10 photos · Max. 5 MB each</span>
+                <span class="upload-status" id="upload-status" aria-live="polite">No photos added</span>
+              </div>
+              <button class="button button-outline choose-photos" type="button">Choose photos</button>
+            </div>
+            <div class="photo-guidance">
+              <div class="photo-tip">
+                <img src="assets/figma-car-front-photo.svg" width="20" height="20" alt="Front view of a car for photo guidance" />
+                <div><strong>Exterior</strong><span>Front, rear and both sides</span></div>
+              </div>
+              <div class="photo-tip">
+                <img src="assets/armchair.svg" width="20" height="20" alt="Seat icon representing interior photos" />
+                <div><strong>Interior</strong><span>Dashboard, seats and cabin</span></div>
+              </div>
+              <div class="photo-tip">
+                <img src="assets/scan-eye.svg" width="20" height="20" alt="Eye icon representing clear vehicle photos" />
+                <div><strong>Details</strong><span>Odometer and any damage</span></div>
+              </div>
+            </div>
+            <p class="field-hint photo-note">
+              Photograph in daylight. Avoid filters and keep personal documents out of the frame.
+            </p>
+          </section>
+
+          <section class="form-card contact-card rounded-xl border border-line bg-white" aria-labelledby="contact-title">
+            <div class="section-heading flex items-start gap-3.5">
+              <span class="step-number">03</span>
+              <div>
+                <h2 id="contact-title">Your contact details</h2>
+                <p>These details help AutoMark contact you about your submission.</p>
+              </div>
+            </div>
+            <div class="field-grid three-columns grid gap-5">
+              <div class="field">
+                <label for="full-name">Full name <span>*</span></label>
+                <input id="full-name" name="full-name" type="text" placeholder="Enter your full name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone / WhatsApp <span>*</span></label>
+                <input id="phone" name="phone" type="tel" placeholder="03XX XXXXXXX" autocomplete="tel" required />
+              </div>
+              <div class="field">
+                <label for="email">Email (optional)</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email address" autocomplete="email" />
+              </div>
+            </div>
+
+            <p class="privacy-note">
+              <img src="assets/lock-keyhole.svg" width="16" height="16" alt="Lock icon representing secure contact details" />
+              <span>Use a number you can be reached on. Your contact details are provided to AutoMark for this enquiry.</span>
+            </p>
+            <div class="section-divider"></div>
+
+            <label class="consent-check">
+              <input type="checkbox" name="consent" required />
+              <span class="consent-copy">
+                <span class="consent-statement">
+                  I confirm that the information provided is accurate and I am authorised to submit this car. I agree to be contacted by AutoMark about this submission. *
+                </span>
+                <a href="mailto:info@automark.pk?subject=Privacy%20policy">Read our Privacy Policy</a>
+              </span>
+            </label>
+
+            <div class="form-actions">
+              <a class="cancel-link" href="index.html">Cancel and return home</a>
+              <button class="button button-gold submit-button" type="submit">
+                <span>Submit Car</span>
+                <img src="assets/arrow-up-right.svg" width="16" height="16" alt="Arrow indicating the submit car action" />
+              </button>
+            </div>
+            <p class="submission-disclaimer">Submitting sends your details for review. It does not publish a listing.</p>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </section>
+        </form>
+
+        <aside class="submission-aside flex flex-col gap-6" aria-label="Selling information">
+          <article class="story-card overflow-hidden rounded-xl bg-navy text-white">
+            <img
+              class="story-image"
+              src="assets/automotive-hero.png"
+              width="1536"
+              height="1024"
+              alt="Black luxury car inside a showroom"
+            />
+            <div class="story-copy">
+              <div class="eyebrow"><span></span> YOUR NEXT CHAPTER</div>
+              <h2>Your car’s story. A fresh start.</h2>
+              <p>
+                Start with the details. We’ll review your submission and use the contact information you provide to discuss your car.
+              </p>
+            </div>
+          </article>
+
+          <section class="checklist-card" aria-labelledby="checklist-title">
+            <h2 id="checklist-title">Before you submit</h2>
+            <ul>
+              <li>
+                <img src="assets/file-text.svg" width="18" height="18" alt="Document icon for vehicle registration papers" />
+                <div><strong>Check your documents</strong><span>Match the year, variant and registration city to your records.</span></div>
+              </li>
+              <li>
+                <img src="assets/camera.svg" width="18" height="18" alt="Camera icon for car photos" />
+                <div><strong>Show the whole car</strong><span>Include clear views of the exterior, interior and any visible damage.</span></div>
+              </li>
+              <li>
+                <img src="assets/clipboard-check.svg" width="18" height="18" alt="Checked clipboard for reviewing vehicle details" />
+                <div><strong>Keep the details accurate</strong><span>Share the current mileage and describe the condition honestly.</span></div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="review-note" aria-labelledby="review-title">
+            <img src="assets/info.svg" width="20" height="20" alt="Information icon for listing review" />
+            <div>
+              <h2 id="review-title">What happens next?</h2>
+              <p>
+                AutoMark reviews the details you share. Further vehicle information or a viewing may be discussed before any listing is considered.
+              </p>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer bg-navy text-white">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AutoMark home">
+            <img src="assets/automark-emblem.svg" width="33" height="30" alt="AutoMark emblem" />
+            <span>AutoMark</span>
+          </a>
+          <p>
+            AutoMark is your trusted partner for buying and selling pre-owned cars in Pakistan. We provide a hassle-free experience with verified vehicles and transparent pricing.
+          </p>
+          <div class="social-links" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="assets/figma-facebook.svg" width="24" height="24" alt="Facebook logo" /></a>
+            <a href="https://instagram.com" aria-label="Instagram"><img src="assets/figma-instagram.svg" width="24" height="24" alt="Instagram logo" /></a>
+            <a href="https://twitter.com" aria-label="Twitter"><img src="assets/figma-twitter.svg" width="24" height="24" alt="Twitter logo" /></a>
+            <a href="https://youtube.com" aria-label="YouTube"><img src="assets/figma-youtube.svg" width="24" height="24" alt="YouTube logo" /></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h2>Quick Links</h2>
+            <a href="index.html">Home</a>
+            <a href="index.html#why-automark">About Us</a>
+            <a href="index.html#featured-cars">Cars for Sale</a>
+            <a href="index.html#home-hero">Our Services</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div>
+            <h2>Popular Brands</h2>
+            <a href="index.html#featured-cars">Toyota</a>
+            <a href="index.html#featured-cars">Honda</a>
+            <a href="index.html#featured-cars">Suzuki</a>
+            <a href="index.html#featured-cars">Hyundai</a>
+            <a href="index.html#featured-cars">Kia</a>
+          </div>
+          <div>
+            <h2>Contact Information</h2>
+            <a href="index.html#contact">Lahore, Pakistan</a>
+            <a href="tel:+923001234567">+92 300 1234567</a>
+            <a href="mailto:info@automark.pk">info@automark.pk</a>
+            <a href="mailto:info@automark.pk">Sample contact details</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AutoMark. All rights reserved.</span>
+        <div><a href="mailto:info@automark.pk?subject=Privacy%20policy">Privacy Policy</a><a href="mailto:info@automark.pk?subject=Terms%20of%20service">Terms of Service</a></div>
+      </div>
+    </footer>
+
+    <script src="site.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

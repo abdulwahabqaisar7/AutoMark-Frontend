@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in to your AutoMark account." />
+    <title>Login | AutoMark</title>
+    <link rel="icon" type="image/svg+xml" href="assets/automark-emblem.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+  <body class="login-page">
+    <header class="site-header">
+      <nav class="navigation" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="AutoMark home"><img src="assets/automark-emblem.svg" width="33" height="30" alt="" /><span>AutoMark</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <div class="primary-navigation" id="primary-navigation">
+          <a href="index.html">Home</a><a href="index.html#why-automark">About Us</a><a href="index.html#featured-cars">Cars for Sale</a><a href="index.html#home-hero">Our Services</a><a href="index.html#contact">Contact</a>
+        </div>
+        <div class="navigation-actions"><a class="button button-gold nav-sell" href="sell-your-car.html">Sell Your Car</a><a class="button button-light nav-login" href="login.html" aria-current="page">Login</a></div>
+      </nav>
+    </header>
+
+    <main class="login-main">
+      <section class="login-card" aria-label="AutoMark account login">
+        <div class="login-welcome">
+          <img
+            class="login-welcome-photo"
+            src="assets/automotive-hero.png"
+            alt="Luxury car parked inside a modern showroom"
+          />
+          <p class="home-eyebrow"><span></span>A BETTER WAY TO BUY PRE-OWNED</p>
+          <div class="login-welcome-copy">
+            <div><h1>Find Your Perfect Car, At The Right Price.</h1><p>Your next chapter starts with the right car. Continue your journey with AutoMark.</p></div>
+            <div class="welcome-divider"></div>
+            <p class="welcome-tagline">Pre-owned cars. A fresh start.</p>
+          </div>
+        </div>
+        <div class="login-panel">
+          <div class="login-form-wrap">
+            <a class="login-back-link" href="index.html"><img src="assets/arrow-left.svg" width="16" height="16" alt="" />Back to home</a>
+            <div class="login-form-heading"><h1>Welcome back</h1><p>Login to your AutoMark account to continue.</p></div>
+            <form class="login-form" id="login-form">
+              <label class="field"><span>Email or phone number</span><input name="identity" type="text" autocomplete="username" placeholder="Enter your email or phone number" required /></label>
+              <label class="field"><span>Password</span><span class="password-control"><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required /><button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false"><img src="assets/figma-login-eye.svg" width="20" height="12" alt="" /></button></span></label>
+              <div class="login-options">
+                <label class="remember-option"><input name="remember" type="checkbox" />Remember me</label>
+                <button class="forgot-password" id="forgot-password" type="button">Forgot password?</button>
+              </div>
+              <button class="button button-gold login-submit" type="submit">Login</button>
+              <p class="form-status" id="login-status" aria-live="polite"></p>
+            </form>
+            <div class="signup-prompt"><span>Don’t have an account?</span> <a href="mailto:info@automark.pk?subject=Create%20an%20AutoMark%20account">Sign up</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="login-footer">
+      <span>© 2026 AutoMark. All rights reserved.</span>
+      <div><a href="mailto:info@automark.pk?subject=Privacy%20policy">Privacy Policy</a><a href="mailto:info@automark.pk?subject=Terms%20of%20service">Terms of Service</a></div>
+    </footer>
+    <script src="site.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
