@@ -2,6 +2,15 @@
 
 AutoMark is a responsive car marketplace website prototype for browsing pre-owned vehicles, viewing car details, and submitting car or contact information. The interface is based on the AutoMark Figma design and uses local image and icon assets.
 
+## Live site
+
+Visit the deployed website: <https://automark-plum.vercel.app/index.html>
+
+- [Home](https://automark-plum.vercel.app/index.html)
+- [Car details](https://automark-plum.vercel.app/car-details.html)
+- [Sell your car](https://automark-plum.vercel.app/sell-your-car.html)
+- [Login](https://automark-plum.vercel.app/login.html)
+
 ## Pages
 
 - **Home** (`index.html`) — featured vehicle cards, city/brand/budget filters, benefits, and contact form.
