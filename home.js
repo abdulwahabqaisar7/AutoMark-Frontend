@@ -32,6 +32,8 @@ searchForm.addEventListener("submit", (event) => {
   document.querySelector("#featured-cars").scrollIntoView({ behavior: "smooth" });
 });
 
+searchForm.addEventListener("change", updateInventory);
+
 for (const filter of categoryFilters) {
   filter.addEventListener("click", () => {
     activeCategory = filter.dataset.category;
@@ -43,6 +45,8 @@ for (const filter of categoryFilters) {
     updateInventory();
   });
 }
+
+updateInventory();
 
 for (const button of document.querySelectorAll(".save-car")) {
   button.addEventListener("click", () => {
